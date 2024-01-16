@@ -1,35 +1,5 @@
 # Helper functions
 
-function git_branch -d 'Return the current branch name'
-    if set -q -x VIM
-    else
-        set -l branch (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
-        if not test $branch > /dev/null
-            set -l position (command git describe --contains --all HEAD 2> /dev/null)
-            if not test $position > /dev/null
-                set -l commit (command git rev-parse HEAD 2> /dev/null | sed 's|\(^.......\).*|\1|')
-                set_color -o "yellow"
-                if test $commit
-                echo "($commit)"
-            set_color normal
-            echo " "
-            end
-            else
-                set_color -o "purple"
-                echo "($position)"
-            set_color normal
-            echo " "
-            end
-        else
-            # set_color -b "cyan"
-            set_color -o "cyan"
-            echo "($branch)"
-        set_color normal
-            echo " "
-        end
-    end
-end
-
 set -g CMD_DURATION 0
 
 function cmd_duration 
@@ -60,24 +30,28 @@ function cmd_duration
     end
 end
 
-function redacted_pwd 
-  echo -n ' '(prompt_pwd --full-length-dirs=4 --dir-length=1)''
-end
-
 # Prompt functions
 
 function fish_prompt
   set -g last_status $status
 
-  set_color -o "white"
-  echo -n -s (whoami) ' '
-  echo -n -s (git_branch)
+  set_color -o -i "white"
+  echo -n -s '['(whoami)'] '
+  set_color normal
+
+  # Git branch
+  set -l branch (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
+  if test $branch > /dev/null
+    set_color -o "cyan"
+    echo -n -s "($branch) "
+    set_color normal
+  end
 end
 
 function fish_right_prompt
     echo -n -s (cmd_duration) 
 
-    set_color -o "white"
-    echo -n -s (redacted_pwd)
+    set_color -i -o "white"
+    echo -n -s ' '(prompt_pwd --full-length-dirs=4 --dir-length=1)''
     set_color normal
 end
