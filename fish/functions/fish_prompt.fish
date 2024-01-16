@@ -75,6 +75,9 @@ function fish_prompt
 end
 
 function fish_right_prompt
-    echo -n -s (cmd_duration) (redacted_pwd)
+    echo -n -s (cmd_duration) 
+
+    set_color -o "white"
+    echo -n -s (redacted_pwd)
     set_color normal
 end
