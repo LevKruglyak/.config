@@ -8,3 +8,4 @@
 * **exa** - better `ls`
 * **lazygit** - git tui
 * **ripgrep** - fast fuzzy search
+* **neofetch** - system information
