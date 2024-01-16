@@ -1,4 +1,3 @@
-
 # Required applications/binaries
 
 * **alacritty** - terminal emulator
@@ -9,3 +8,9 @@
 * **lazygit** - git tui
 * **ripgrep** - fast fuzzy search
 * **neofetch** - system information
+
+# Latex Setup for MacOS
+
+* **MacTex** - latex distribution
+* **Skim** - `brew install --cask skim`
+    * Sync - `custom, nvim, --headless "VimtexInverseSearch %line '%file'"`
