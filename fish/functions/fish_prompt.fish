@@ -41,9 +41,16 @@ function fish_prompt
 
   # Git branch
   set -l branch (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
-  if test $branch > /dev/null
+  if not test -z $branch
     set_color -o "cyan"
-    echo -n -s "($branch) "
+
+    set -l changes (command git status --porcelain)
+    if not test -z $changes
+      echo -n -s "($branch *) "
+    else
+      echo -n -s "($branch) "
+    end
+
     set_color normal
   end
 end
