@@ -1,5 +1,8 @@
 set fish_greeting ""
 
+# For latex neovim integration
+set -gx VIMTEX_OUTPUT_DIRECTORY build
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
