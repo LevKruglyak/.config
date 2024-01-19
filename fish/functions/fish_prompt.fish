@@ -44,12 +44,12 @@ function fish_prompt
   if not test -z "$branch"
     set_color -o "cyan"
 
-    set -l changes (command git status --porcelain)
-    if not test -z "$changes"
-      echo -n -s "($branch *) "
-    else
+    # set -l changes (command git status --porcelain)
+    # if not test -z "$changes"
+    #   echo -n -s "($branch *) "
+    # else
       echo -n -s "($branch) "
-    end
+    # end
 
     set_color normal
   end
