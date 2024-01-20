@@ -8,6 +8,7 @@
 * **lazygit** - git tui
 * **ripgrep** - fast fuzzy search
 * **neofetch** - system information
+* **fzf** - fuzzy file search
 
 # Latex Setup for MacOS
 
