@@ -20,10 +20,12 @@ return {
       vim.g.vimtex_view_skim_activate = 1
       vim.g.vimtex_compiler_latexmk = {
           options = {
+              '-halt-on-error',
               '-file-line-error',
               '-synctex=1',
               '-interaction=nonstopmode',
-              -- '-shell-escape',
+              '-pdf',
+              '-shell-escape',
           },
       }
     end,
