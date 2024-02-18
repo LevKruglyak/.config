@@ -9,7 +9,11 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { 
+    "catppuccin/nvim", 
+    name = "catppuccin", 
+    priority = 1000 
+  },
   {
     "lervag/vimtex",
     lazy = false,
@@ -28,5 +32,8 @@ return {
           },
       }
     end,
+  },
+  {
+    'untitled-ai/jupyter_ascending.vim'
   }
 }

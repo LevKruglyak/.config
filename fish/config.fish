@@ -30,3 +30,5 @@ if type -q exa
   alias llt "exa -l -g --icons --tree"
   alias lla "ll -a"
 end
+
+alias journal "nvim -u ~/.config/journal_nvim/init.lua"
