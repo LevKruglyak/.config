@@ -35,14 +35,14 @@ end
 function fish_prompt
   set -g last_status $status
 
-  set_color -o -i "white"
+  set_color -o -i "brwhite"
   echo -n -s '['(whoami)'] '
   set_color normal
 
   # Git branch
   set -l branch (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
   if not test -z "$branch"
-    set_color -o "cyan"
+    set_color -o "brcyan"
 
     # set -l changes (command git status --porcelain)
     # if not test -z "$changes"
@@ -59,7 +59,7 @@ function fish_right_prompt
     echo -n -s (cmd_duration) 
     set -g CMD_DURATION 0
 
-    set_color -i -o "white"
+    set_color -i "brwhite"
     echo -n -s ' '(prompt_pwd --full-length-dirs=4 --dir-length=1)''
     set_color normal
 end
