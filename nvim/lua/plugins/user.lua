@@ -37,6 +37,28 @@ return {
   },
 
   {
+    "williamboman/mason.nvim",
+    opts = function(_, opts)
+      opts.ui = opts.ui or {}
+      opts.ui.border = "rounded"
+      opts.ui.width = 0.8
+      opts.ui.height = 0.8
+    end,
+  },
+
+  {
+      "nvim-telescope/telescope.nvim",
+      opts = function(_, opts)
+        opts.defaults = opts.defaults or {}
+
+        -- Set the border with no characters and highlight the background
+        opts.defaults.borderchars = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }  -- No characters for the border
+        opts.defaults.winblend = 0  -- Ensure the background is not transparent
+        opts.defaults.layout_strategy = 'horizontal'
+      end,
+    },
+
+  {
     "L3MON4D3/LuaSnip",
     config = function(plugin, opts)
       require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call

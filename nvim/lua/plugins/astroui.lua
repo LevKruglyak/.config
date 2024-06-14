@@ -22,7 +22,11 @@ return {
         CursorLineFold = { bg = "#3c3836" },
         StatusLine = { bg = "bg" },
         WinSeparator = { bg = "#3c3836", fg = "#3c3836" },
-        FloatBorder = { bg = "NONE", fg = "#ebdbb2" }
+        FloatBorder = { bg = "#3c3836", fg = "#3c3836" },
+        TelescopeBorder = { bg = "#3c3836" },
+        TelescopeResultsBorder = { bg = "#3c3836" },
+        TelescopePromptBorder = { bg = "#3c3836" },
+        TelescopePreviewBorder = { bg = "#3c3836" },
       }
     },
   },
