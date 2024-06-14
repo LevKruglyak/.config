@@ -46,6 +46,20 @@ return {
     end,
   },
 
+  -- {
+  --   "ewis6991/gitsigns.nvim",
+  --   opts = {
+  --     signs = {
+  --       add          = { text = '+' },
+  --       change       = { text = '*' },
+  --       delete       = { text = 'x' },
+  --       topdelete    = { text = 'x' },
+  --       changedelete = { text = 'x' },
+  --       untracked    = { text = 'u' },
+  --     },
+  --   }
+  -- },
+
   {
       "nvim-telescope/telescope.nvim",
       opts = function(_, opts)

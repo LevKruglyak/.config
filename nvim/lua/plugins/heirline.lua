@@ -19,5 +19,20 @@ return {
           padding = { right = 1 },
       }),
     }
+
+    opts.winbar = {
+      init = function(self)
+        self.bufnr = vim.api.nvim_get_current_buf()
+      end,
+      fallthrough = false,
+      {
+        status.component.breadcrumbs({
+          hl = status.hl.get_attributes("winbar", true),
+        }),
+        status.component.fill({
+          hl = { bg = "bg" }
+        })
+      },
+    }
   end,
 }
