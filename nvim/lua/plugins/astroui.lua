@@ -20,7 +20,7 @@ return {
       gruvbox = {
         CursorLineSign = { bg = "#3c3836" },
         CursorLineFold = { bg = "#3c3836" },
-        StatusLine = { bg = "#3c3836" },
+        StatusLine = { bg = "bg" },
         WinSeparator = { bg = "#3c3836", fg = "#3c3836" },
         FloatBorder = { bg = "NONE", fg = "#ebdbb2" }
       }
