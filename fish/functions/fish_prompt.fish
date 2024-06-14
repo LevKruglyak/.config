@@ -58,6 +58,7 @@ end
 function fish_right_prompt
     echo -n -s (cmd_duration) 
     set -g CMD_DURATION 0
+    set_color normal
 
     set_color -i "brwhite"
     echo -n -s ' '(prompt_pwd --full-length-dirs=4 --dir-length=1)''
