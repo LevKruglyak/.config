@@ -1,13 +1,6 @@
 set fish_greeting ""
 
-# For latex neovim integration
-set -gx VIMTEX_OUTPUT_DIRECTORY build
-
-# Path directories
-set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx PATH ~/.local/bin $PATH
-set -gx PATH ~/.cargo/bin $PATH
+pyenv init - | source
 
 # Theme settings
 set -g theme_color_scheme terminal-dark
@@ -17,14 +10,14 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # Better ls commands
-if type -q exa
-  alias ls "exa -g --icons"
-  alias lt "exa -g --icons --tree"
-  alias la "exa -a -g --icons"
-  alias lta "exa -a -g --icons --tree"
-  alias ll "exa -l -g --icons"
-  alias llt "exa -l -g --icons --tree"
+if type -q eza
+  alias ls "eza -g --icons"
+  alias lt "eza -g --icons --tree"
+  alias la "eza -a -g --icons"
+  alias lta "eza -a -g --icons --tree"
+  alias ll "eza -l -g --icons"
+  alias llt "eza -l -g --icons --tree"
   alias lla "ll -a"
 end
 
-alias journal "nvim -u ~/.config/journal_nvim/init.lua"
+alias journal "nvim -u ~/.config/journal/init.lua"

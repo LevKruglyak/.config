@@ -15,5 +15,7 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+vim.opt_local.spellfile:append("~/.config/nvim/en.utf-8.add")
+
 require "lazy_setup"
 require "polish"

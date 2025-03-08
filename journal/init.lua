@@ -32,13 +32,13 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 lazy.opts = {}
 
 lazy.setup({
-  "catppuccin/nvim", 
+  "ellisonleao/gruvbox.nvim",
   "junegunn/goyo.vim",
   "junegunn/limelight.vim"
 })
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme('catppuccin-mocha')
+vim.cmd.colorscheme('gruvbox')
 
 local function goyo_enter()
   -- if vim.fn.executable('tmux') == 1 and vim.fn.strlen(vim.env.TMUX) ~= 0 then
