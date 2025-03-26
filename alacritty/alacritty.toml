@@ -1,7 +1,8 @@
 live_config_reload = true
 
 import = [ 
-    "~/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"
+    # "~/.config/alacritty/alacritty-theme/themes/gruvbox_dark.toml"
+    "~/.config/alacritty/alacritty-theme/themes/catppuccin_frappe.toml"
 ]
 
 [window]
