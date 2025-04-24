@@ -1,6 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export --path DYLD_LIBRARY_PATH:/usr/local/lib
+SETUVAR --export CLIK_DATA:/Users/levkruglyak/Documents/Harvard/Physics212/project/packages/code/planck/clik/share/clik
+SETUVAR --export --path CLIK_PATH:/Users/levkruglyak/Documents/Harvard/Physics212/project/packages/code/planck/clik
+SETUVAR --export CLIK_PLUGIN:dust\x2cffp8\x2cbasic_P\x2cbasic\x2ccibsz\x2csystematics
+SETUVAR --export --path DYLD_LIBRARY_PATH:/opt/homebrew/Cellar/gcc/14\x2e2\x2e0_1/lib/gcc/current\x1e/System/Library/Frameworks/Accelerate\x2eframework/Versions/Current/Frameworks/vecLib\x2eframework/Versions/Current\x20/Users/levkruglyak/Documents/Harvard/Physics212/project/packages/code/planck/clik/lib\x20/opt/homebrew/Cellar/gcc/14\x2e2\x2e0_1/lib/gcc/current\x20/System/Library/Frameworks/Accelerate\x2eframework/Versions/Current/Frameworks/vecLib\x2eframework/Versions/Current\x20/Users/levkruglyak/Documents/Harvard/Physics212/project/packages/code/planck/clik/lib\x20/usr/local/lib
+SETUVAR --export FC:/opt/homebrew/bin/gfortran
+SETUVAR --export --path LIBRARY_PATH:/opt/homebrew/bin
 SETUVAR --export PYENV_ROOT:/Users/levkruglyak/\x2epyenv
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
