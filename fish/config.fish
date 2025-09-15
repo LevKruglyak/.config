@@ -21,3 +21,5 @@ if type -q eza
 end
 
 alias journal "nvim -u ~/.config/journal/init.lua"
+
+alias emsdk-activate "source /Users/levkruglyak/emsdk/emsdk_env.fish"
